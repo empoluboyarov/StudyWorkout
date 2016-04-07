@@ -7,14 +7,23 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context="com.example.evgeniy.workout.MainActivity">
 
     <fragment
-        android:layout_width="match_parent"
+        class="com.example.evgeniy.workout.WorkoutListFragment"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:id="@+id/list_frag"/>
+
+    
+    <fragment
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
         android:id="@+id/detail_frag"
         class="com.example.evgeniy.workout.WorkoutDetailFragment"
-        tools:layout="@layout/fragment_workout_detail" />
+        />
 
 </LinearLayout>
